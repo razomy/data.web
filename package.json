@@ -1,0 +1,23 @@
+{
+  "name": "@razomy/data-web",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "npx nuxt typecheck && nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@razomy/nuxt": "0.0.1-alpha.7",
+    "@razomy/string-case": "0.0.1-alpha.4",
+    "@prisma/adapter-pg": "^7.4.2",
+    "@prisma/client": "^7.4.2"
+  },
+  "devDependencies": {
+    "prisma": "^7.4.2",
+    "typescript": "^5.9.3",
+    "vue-tsc": "^3.2.4"
+  }
+}
