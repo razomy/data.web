@@ -9,7 +9,7 @@ node_modules
 razomy/python
 
 generated
-
+i18n
 # python cache
 __pycache__
 # Nuxt dev/build outputs

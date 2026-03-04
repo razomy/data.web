@@ -10,12 +10,14 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@razomy/nuxt": "0.0.1-alpha.7",
-    "@razomy/string-case": "0.0.1-alpha.4",
     "@prisma/adapter-pg": "^7.4.2",
-    "@prisma/client": "^7.4.2"
+    "@prisma/client": "^7.4.2",
+    "@razomy/nuxt": "0.0.1-alpha.8",
+    "@razomy/string-case": "0.0.1-beta.2",
+    "firebase-admin": "^13.7.0"
   },
   "devDependencies": {
+    "@types/node": "^25.3.3",
     "prisma": "^7.4.2",
     "typescript": "^5.9.3",
     "vue-tsc": "^3.2.4"

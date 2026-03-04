@@ -13,18 +13,21 @@ enum crdb_internal_region {
 
 // fs
 
-enum FsType {
+enum FsNodeType {
   None
-  File
-  Directory
-  FileUrl
+  FileJson         // Stores structured text/data in content_json
+  FileStorageUrl   // Stores an S3/Cloud URL in the content_url column content_json {url:string}
+  FileBinary       // Stores raw file data in content_binary
+  Directory        // Acts as a folder (uses the parent/child relations)
+  @@map("fs_node_type")
 }
 
 model FsNode {
   id        String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
   name      String   @db.String(255)
-  type      FsType
-  content   String?
+  type      FsNodeType
+  content_json Json?
+  content_binary Bytes?
 
   // Настройка рекурсивной связи (Self-relation)
   parentId  String?  @map("parent_id") @db.Uuid
@@ -37,4 +40,6 @@ model FsNode {
   @@index([ancestors], type: Gin, name: "idx_ancestors")
 
   @@unique([name, parentId], name: "unique_name_in_folder")
+
+  @@map("fs_node")
 }
