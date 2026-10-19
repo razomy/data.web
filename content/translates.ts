@@ -1,5 +1,5 @@
 import {en as vuetifyEn} from 'vuetify/locale';
-import type {LeafPathGenerator, RzmNuxtTranslate} from '@razomy/nuxt/runtime/functions';
+import type {LeafPathGenerator} from '@razomy/nuxt/runtime/functions';
 
 const nuxtTranslates = {
   footer: {
@@ -30,7 +30,7 @@ const nuxtTranslates = {
     name: 'Data',
     description: 'Data storage',
   },
-} as const satisfies RzmNuxtTranslate['nuxt'];
+};
 
 declare global {
   // Tool to search broken translates:

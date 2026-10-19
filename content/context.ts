@@ -1,6 +1,6 @@
 import {i18n} from './translates';
 // import {directoriesTree, directoryToNavigationNode} from '../razomy/db';
-import type {NavigationNode, RzmNuxtConfig} from '@razomy/nuxt/runtime/functions';
+import type {NavigationNode} from '@razomy/nuxt/runtime/functions';
 
 // import type {Category} from '@razomy/nuxt/runtime/functions';
 // import {lT} from '../razomy/db/alies';

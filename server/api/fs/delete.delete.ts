@@ -1,8 +1,8 @@
 import * as fsService from '../../functions/fsNode';
-import {cookieVerifyOrThrow} from '#server/functions/cookieVerifyOrThrow';
+import { cookieVerifyOrThrow } from '../../functions/cookieVerifyOrThrow';
 
 export default defineEventHandler(async (event) => {
-  const decodedClaims = await cookieVerifyOrThrow(event);
+  await cookieVerifyOrThrow(event);
   const body = await readBody(event);
   return await fsService.delete_(body.id);
 });

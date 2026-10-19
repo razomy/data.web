@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+  --ds-font-display: 'DM Sans', sans-serif;
+  --ds-font-body: 'Inter', sans-serif;
+  --ds-font-mono: 'JetBrains Mono', monospace;
+  --ds-border-color: rgba(var(--v-border-color), var(--v-border-opacity));
+  --ds-surface: rgb(var(--v-theme-surface));
+  --ds-surface-light: rgb(var(--v-theme-surface-light, var(--v-theme-surface-variant)));
+  --ds-background: rgb(var(--v-theme-background));
+  --ds-primary: rgb(var(--v-theme-primary));
+  --ds-secondary: rgb(var(--v-theme-secondary));
+  --ds-success: rgb(var(--v-theme-success));
+  --ds-warning: rgb(var(--v-theme-warning));
+  --ds-error: rgb(var(--v-theme-error));
+  --ds-info: rgb(var(--v-theme-info));
+  --ds-text-default: rgba(var(--v-theme-on-surface), var(--v-high-emphasis-opacity, 0.87));
+  --ds-text-muted: rgba(var(--v-theme-on-surface), var(--v-medium-emphasis-opacity, 0.6));
+  --ds-text-disabled: rgba(var(--v-theme-on-surface), var(--v-disabled-opacity, 0.38));
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: var(--ds-font-body);
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--ds-font-display);
+  margin: 0;
+}
+
+code, pre {
+  font-family: var(--ds-font-mono) !important;
+  margin: 0;
+}
+
+/* Custom Scrollbars using role-based theme tokens */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(var(--v-theme-on-surface), 0.2);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(var(--v-theme-primary));
+}
