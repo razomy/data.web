@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue';
-import type { EntityField } from '~/types/graph';
+import type { EntityField } from '~/razomy/abstractions/graph';
 import FieldValue from './FieldValue.vue';
-import Grid from '~/components/ds/layout/Grid.vue';
-import Body from '~/components/ds/typography/Body.vue';
-import Badge from '~/components/ds/elements/Badge.vue';
-import TextInput from '~/components/ds/input/TextInput.vue';
-import Button from '~/components/ds/button/Button.vue';
+import Grid from '~/razomy/ds-vue/layout/Grid.vue';
+import Body from '~/razomy/ds-vue/typography/Body.vue';
+import Badge from '~/razomy/ds-vue/elements/Badge.vue';
+import TextInput from '~/razomy/ds-vue/input/TextInput.vue';
+import Button from '~/razomy/ds-vue/button/Button.vue';
 
 const props = withDefaults(
   defineProps<{

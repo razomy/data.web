@@ -14,7 +14,7 @@ import type {
   MergeRequest,
   MergeRequestFieldChange,
   TableRow,
-} from '~/types/graph';
+} from '~/razomy/abstractions/graph';
 import { useGraphApi } from './useGraphApi';
 
 export function useWorkspaceStore() {

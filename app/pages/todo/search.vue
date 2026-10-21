@@ -1,14 +1,14 @@
 <script setup lang="ts">
 import { ref, watch, onMounted } from 'vue';
 import { useRouter } from 'vue-router';
-import type { Entity, EntityField } from '~/types/graph';
+import type { Entity, EntityField } from '~/razomy/abstractions/graph';
 import { useGraphApi } from '~/composables/useGraphApi';
 import { useWorkspaceStore } from '~/composables/useWorkspaceStore';
-import Grid from '~/components/ds/layout/Grid.vue';
-import Container from '~/components/ds/layout/Container.vue';
-import Body from '~/components/ds/typography/Body.vue';
-import Button from '~/components/ds/button/Button.vue';
-import Badge from '~/components/ds/elements/Badge.vue';
+import Grid from '~/razomy/ds-vue/layout/Grid.vue';
+import Container from '~/razomy/ds-vue/layout/Container.vue';
+import Body from '~/razomy/ds-vue/typography/Body.vue';
+import Button from '~/razomy/ds-vue/button/Button.vue';
+import Badge from '~/razomy/ds-vue/elements/Badge.vue';
 import GitTopBar from '~/components/GitTopBar.vue';
 import SearchResultCard from '~/components/SearchResultCard.vue';
 import EntitySidebar from '~/components/EntitySidebar.vue';

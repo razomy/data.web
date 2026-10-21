@@ -1,13 +1,13 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue';
-import { FsNodeType } from '~/types/graph';
-import type { FsNodeRecord } from '~/types/graph';
-import Grid from '~/components/ds/layout/Grid.vue';
-import Card from '~/components/ds/card/Card.vue';
-import Body from '~/components/ds/typography/Body.vue';
-import Button from '~/components/ds/button/Button.vue';
-import Badge from '~/components/ds/elements/Badge.vue';
-import TextInput from '~/components/ds/input/TextInput.vue';
+import { FsNodeType } from '~/razomy/abstractions/graph';
+import type { FsNodeRecord } from '~/razomy/abstractions/graph';
+import Grid from '~/razomy/ds-vue/layout/Grid.vue';
+import Card from '~/razomy/ds-vue/card/Card.vue';
+import Body from '~/razomy/ds-vue/typography/Body.vue';
+import Button from '~/razomy/ds-vue/button/Button.vue';
+import Badge from '~/razomy/ds-vue/elements/Badge.vue';
+import TextInput from '~/razomy/ds-vue/input/TextInput.vue';
 
 const props = defineProps<{
   files: FsNodeRecord[];

@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import { onMounted, watch } from 'vue';
 import { useWorkspaceStore } from '~/composables/useWorkspaceStore';
-import type { Entity, TableRow } from '~/types/graph';
-import Grid from '~/components/ds/layout/Grid.vue';
-import Body from '~/components/ds/typography/Body.vue';
-import Button from '~/components/ds/button/Button.vue';
-import Badge from '~/components/ds/elements/Badge.vue';
+import type { Entity, TableRow } from '~/razomy/abstractions/graph';
+import Grid from '~/razomy/ds-vue/layout/Grid.vue';
+import Body from '~/razomy/ds-vue/typography/Body.vue';
+import Button from '~/razomy/ds-vue/button/Button.vue';
+import Badge from '~/razomy/ds-vue/elements/Badge.vue';
 import GitTopBar from '~/components/GitTopBar.vue';
 import LeftDatasetSidebar from '~/components/LeftDatasetSidebar.vue';
 import VirtualTable from '~/components/VirtualTable.vue';

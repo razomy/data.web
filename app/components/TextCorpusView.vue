@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import { computed } from 'vue';
-import type { TableRow } from '~/types/graph';
+import type { TableRow } from '~/razomy/abstractions/graph';
 import { entities } from '~/data/mockData';
-import Grid from '~/components/ds/layout/Grid.vue';
-import Card from '~/components/ds/card/Card.vue';
-import Body from '~/components/ds/typography/Body.vue';
-import Badge from '~/components/ds/elements/Badge.vue';
-import Button from '~/components/ds/button/Button.vue';
+import Grid from '~/razomy/ds-vue/layout/Grid.vue';
+import Card from '~/razomy/ds-vue/card/Card.vue';
+import Body from '~/razomy/ds-vue/typography/Body.vue';
+import Badge from '~/razomy/ds-vue/elements/Badge.vue';
+import Button from '~/razomy/ds-vue/button/Button.vue';
 import AppCopyBtn from './ui/AppCopyBtn.vue';
 
 const props = defineProps<{

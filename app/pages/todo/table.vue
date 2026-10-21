@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { ref, watch, onMounted } from 'vue';
 import { useRouter } from 'vue-router';
-import type { FsNodeRecord } from '~/types/graph';
+import type { FsNodeRecord } from '~/razomy/abstractions/graph';
 import { useGraphApi } from '~/composables/useGraphApi';
 import { useWorkspaceStore } from '~/composables/useWorkspaceStore';
-import Grid from '~/components/ds/layout/Grid.vue';
+import Grid from '~/razomy/ds-vue/layout/Grid.vue';
 import GitTopBar from '~/components/GitTopBar.vue';
 import TableExplorer from '~/components/tableExplorer.vue';
 import EntitySidebar from '~/components/EntitySidebar.vue';

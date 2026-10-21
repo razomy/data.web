@@ -1,6 +1,6 @@
-import type { DataAuthor, Entity, GraphEdge, GraphNode } from '~/types/graph.ts';
+import type { DataAuthor, Entity, GraphEdge, GraphNode } from '~/razomy/abstractions/graph.ts';
 
-export type { FieldType, EntityField, Entity, GraphNode, GraphEdge } from '~/types/graph.ts';
+export type { FieldType, EntityField, Entity, GraphNode, GraphEdge } from '~/razomy/abstractions/graph.ts';
 
 export const ENTITY_COLORS: Record<string, string> = {
   Person: '#00C9A7',

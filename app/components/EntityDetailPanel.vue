@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue';
-import type { Entity } from '~/types/graph';
+import type { Entity } from '~/razomy/abstractions/graph';
 import FieldRenderer from './FieldRenderer.vue';
-import Grid from '~/components/ds/layout/Grid.vue';
-import Body from '~/components/ds/typography/Body.vue';
-import Badge from '~/components/ds/elements/Badge.vue';
-import Button from '~/components/ds/button/Button.vue';
+import Grid from '~/razomy/ds-vue/layout/Grid.vue';
+import Body from '~/razomy/ds-vue/typography/Body.vue';
+import Badge from '~/razomy/ds-vue/elements/Badge.vue';
+import Button from '~/razomy/ds-vue/button/Button.vue';
 import AppCopyBtn from './ui/AppCopyBtn.vue';
 import StatCard from './ui/StatCard.vue';
 import { entities } from '~/data/mockData';

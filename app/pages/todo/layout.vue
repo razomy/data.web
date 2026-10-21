@@ -3,11 +3,11 @@
 import { ref, h } from 'vue'
 import { useIdeLayout } from '~/composables/useIdeLayout'
 import UserInspector from '~/components/UserInspector.vue'
-import Container from '~/components/ds/layout/Container.vue'
-import Grid from '~/components/ds/layout/Grid.vue'
-import Card from '~/components/ds/card/Card.vue'
-import Body from '~/components/ds/typography/Body.vue'
-import Button from '~/components/ds/button/Button.vue'
+import Container from '~/razomy/ds-vue/layout/Container.vue'
+import Grid from '~/razomy/ds-vue/layout/Grid.vue'
+import Card from '~/razomy/ds-vue/card/Card.vue'
+import Body from '~/razomy/ds-vue/typography/Body.vue'
+import Button from '~/razomy/ds-vue/button/Button.vue'
 
 definePageMeta({ layout: 'smart' })
 

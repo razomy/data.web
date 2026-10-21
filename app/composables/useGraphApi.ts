@@ -12,7 +12,7 @@ import type {
   MergeRequestFieldChange,
   PaginatedResult,
   TableRow,
-} from '~/types/graph';
+} from '~/razomy/abstractions/graph';
 
 export function useGraphApi() {
   async function fetchCatalog(): Promise<{

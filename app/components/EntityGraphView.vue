@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import { ref, computed, watch, onMounted, onUnmounted } from 'vue';
-import type { Entity, GraphNode, GraphEdge, LocalSubgraph } from '~/types/graph';
+import type { Entity, GraphNode, GraphEdge, LocalSubgraph } from '~/razomy/abstractions/graph';
 import { resolveLocalSubgraph } from '~/data/graphResolver';
-import Grid from '~/components/ds/layout/Grid.vue';
-import Body from '~/components/ds/typography/Body.vue';
-import Button from '~/components/ds/button/Button.vue';
-import Badge from '~/components/ds/elements/Badge.vue';
+import Grid from '~/razomy/ds-vue/layout/Grid.vue';
+import Body from '~/razomy/ds-vue/typography/Body.vue';
+import Button from '~/razomy/ds-vue/button/Button.vue';
+import Badge from '~/razomy/ds-vue/elements/Badge.vue';
 
 const props = withDefaults(
   defineProps<{

@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { ref, computed, onMounted, onUnmounted } from 'vue';
 import TableCellValue from './TableCellValue.vue';
-import type { TableRow } from '~/types/graph';
-import Grid from '~/components/ds/layout/Grid.vue';
-import Body from '~/components/ds/typography/Body.vue';
-import Badge from '~/components/ds/elements/Badge.vue';
+import type { TableRow } from '~/razomy/abstractions/graph';
+import Grid from '~/razomy/ds-vue/layout/Grid.vue';
+import Body from '~/razomy/ds-vue/typography/Body.vue';
+import Badge from '~/razomy/ds-vue/elements/Badge.vue';
 
 export interface ColDef {
   key: string;

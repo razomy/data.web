@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import type { TableRow } from '~/types/graph';
-import Card from '~/components/ds/card/Card.vue';
-import Grid from '~/components/ds/layout/Grid.vue';
-import Body from '~/components/ds/typography/Body.vue';
-import Badge from '~/components/ds/elements/Badge.vue';
+import type { TableRow } from '~/razomy/abstractions/graph';
+import Card from '~/razomy/ds-vue/card/Card.vue';
+import Grid from '~/razomy/ds-vue/layout/Grid.vue';
+import Body from '~/razomy/ds-vue/typography/Body.vue';
+import Badge from '~/razomy/ds-vue/elements/Badge.vue';
 
 defineProps<{
   row: TableRow;

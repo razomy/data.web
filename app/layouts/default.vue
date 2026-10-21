@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Grid from '~/components/ds/layout/Grid.vue';
+import Grid from '~/razomy/ds-vue/layout/Grid.vue';
 import Nav from '~/components/Nav.vue';
 </script>
 

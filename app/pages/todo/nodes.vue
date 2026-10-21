@@ -2,7 +2,7 @@
 import { onMounted } from 'vue';
 import { useRouter } from 'vue-router';
 import { useWorkspaceStore } from '~/composables/useWorkspaceStore';
-import Grid from '~/components/ds/layout/Grid.vue';
+import Grid from '~/razomy/ds-vue/layout/Grid.vue';
 import GitTopBar from '~/components/GitTopBar.vue';
 import GlobalGraphCanvas from '~/components/GlobalGraphCanvas.vue';
 import EntitySidebar from '~/components/EntitySidebar.vue';

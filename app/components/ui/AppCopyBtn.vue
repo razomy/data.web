@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue';
-import Button from '~/components/ds/button/Button.vue';
+import Button from '~/razomy/ds-vue/button/Button.vue';
 
 const props = withDefaults(
   defineProps<{

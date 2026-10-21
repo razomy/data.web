@@ -6,13 +6,13 @@ import type {
   FsNodeRecord,
   MergeRequest,
   MergeRequestFieldChange,
-} from '~/types/graph';
-import Grid from '~/components/ds/layout/Grid.vue';
-import Card from '~/components/ds/card/Card.vue';
-import Body from '~/components/ds/typography/Body.vue';
-import Button from '~/components/ds/button/Button.vue';
-import Badge from '~/components/ds/elements/Badge.vue';
-import TextInput from '~/components/ds/input/TextInput.vue';
+} from '~/razomy/abstractions/graph';
+import Grid from '~/razomy/ds-vue/layout/Grid.vue';
+import Card from '~/razomy/ds-vue/card/Card.vue';
+import Body from '~/razomy/ds-vue/typography/Body.vue';
+import Button from '~/razomy/ds-vue/button/Button.vue';
+import Badge from '~/razomy/ds-vue/elements/Badge.vue';
+import TextInput from '~/razomy/ds-vue/input/TextInput.vue';
 
 const props = defineProps<{
   drawerOpen: boolean;

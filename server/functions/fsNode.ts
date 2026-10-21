@@ -1,6 +1,6 @@
 import { mockOrm } from './mockOrm';
-import { FsNodeType } from '~/types/graph';
-import type { FsNodeRecord, PaginatedResult } from '~/types/graph';
+import { FsNodeType } from '~/razomy/abstractions/graph';
+import type { FsNodeRecord, PaginatedResult } from '~/razomy/abstractions/graph';
 
 export async function create(
   name: string,

@@ -1,7 +1,7 @@
 import { AUTHORS, entities, graphEdges } from './mockData.ts';
-import type { Entity, GraphEdge, GraphNode, LocalSubgraph, TableRow } from '~/types/graph.ts';
+import type { Entity, GraphEdge, GraphNode, LocalSubgraph, TableRow } from '~/razomy/abstractions/graph.ts';
 
-export type { LocalSubgraph } from '~/types/graph.ts';
+export type { LocalSubgraph } from '~/razomy/abstractions/graph.ts';
 
 const RELATION_TYPES = [
   'WORKS_AT',

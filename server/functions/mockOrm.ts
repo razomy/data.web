@@ -1,4 +1,4 @@
-import { FsNodeType } from '~/types/graph';
+import { FsNodeType } from '~/razomy/abstractions/graph';
 import type {
   DataAuthor,
   DatasetCollection,
@@ -11,7 +11,7 @@ import type {
   MergeRequestFieldChange,
   PaginatedResult,
   TableRow,
-} from '~/types/graph';
+} from '~/razomy/abstractions/graph';
 import { AUTHORS, entities as seedEntities, graphEdges as seedEdges, graphNodes as seedGraphNodes } from '~/data/mockData';
 import { generateRows } from '~/data/generateRows';
 import { registerEntity, resolveLocalSubgraph, rowToEntity } from '~/data/graphResolver';

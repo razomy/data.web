@@ -1,7 +1,7 @@
-import type { EntityField, TableRow } from '~/types/graph.ts';
+import type { EntityField, TableRow } from '~/razomy/abstractions/graph.ts';
 import { AUTHORS } from './mockData.ts';
 
-export type { TableRow } from '~/types/graph.ts';
+export type { TableRow } from '~/razomy/abstractions/graph.ts';
 
 const FIRST_NAMES = ['Sarah', 'Marcus', 'Leilani', 'Ahmad', 'Priya', 'Jake', 'Yuki', 'Diego', 'Fatima', 'Ethan', 'Nour', 'Rin', 'Kofi', 'Sven', 'Aisha', 'Chen', 'Ivan', 'Mira', 'Tariq', 'Zoe', 'Felix', 'Nina', 'Omar', 'Lucia', 'Sam'];
 const LAST_NAMES = ['Chen', 'Okonkwo', 'Kahale', 'Rashidi', 'Sharma', 'Williams', 'Tanaka', 'Herrera', 'Al-Amin', 'Brooks', 'Hassan', 'Nakamura', 'Mensah', 'Lindqvist', 'Diallo', 'Wang', 'Petrov', 'Kovac', 'Abbas', 'Müller', 'Becker', 'Popescu', 'Santos', 'Ferrari', 'Park'];
