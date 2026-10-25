@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import type { Entity, EntityField } from '~/razomy/abstractions/graph';
-import Card from '~/razomy/ui-vue/card/Card.vue';
-import Grid from '~/razomy/ui-vue/layout/Grid.vue';
-import Body from '~/razomy/ui-vue/typography/Body.vue';
-import Badge from '~/razomy/ui-vue/elements/Badge.vue';
+import {Card} from '@razomy/vue';
+import {Grid} from '@razomy/vue';
+import {Body} from '@razomy/vue';
+import {Badge} from '@razomy/vue';
 
 defineProps<{
   entity: Entity;

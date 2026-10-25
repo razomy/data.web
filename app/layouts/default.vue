@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import TabContainer from "~/components/TabContainer.vue";
+import TabContainer from "~/razomy/tab/TabContainer.vue";
 </script>
 
 <template>

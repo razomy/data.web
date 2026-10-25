@@ -1,12 +1,12 @@
 <script setup lang="ts" generic="T extends Record<string, any>">
 import { computed } from 'vue';
-import Grid from '~/razomy/ui-vue/layout/Grid.vue';
-import Card from '~/razomy/ui-vue/card/Card.vue';
-import Body from '~/razomy/ui-vue/typography/Body.vue';
-import Button from '~/razomy/ui-vue/button/Button.vue';
-import Badge from '~/razomy/ui-vue/elements/Badge.vue';
-import TextInput from '~/razomy/ui-vue/input/TextInput.vue';
-import AppCopyBtn from '../razomy/ui-vue/AppCopyBtn.vue';
+import {Grid} from '@razomy/vue';
+import {Card} from '@razomy/vue';
+import {Body} from '@razomy/vue';
+import {Button} from '@razomy/vue';
+import {Badge} from '@razomy/vue';
+import {TextInput} from '@razomy/vue';
+import {AppCopyBtn} from '@razomy/vue';
 import type {TableDeclaration} from "@razomy/sql";
 
 export interface FilterOption {
@@ -97,9 +97,8 @@ const filterLabel = computed(() => {
 
 <template>
   <Grid variant="y" gap="md" padding="md" scrollable full-height>
-    <Card padding="none" gap="none">
       <!-- Header -->
-      <Grid variant="x_between" padding="md" surface="elevated" border="b">
+      <Grid variant="x_between" padding="md" border="b">
         <Grid variant="y" gap="xss">
           <Grid variant="x" gap="xs">
             <Body variant="lgBold">{{ schema.title }}</Body>
@@ -111,24 +110,24 @@ const filterLabel = computed(() => {
           </Body>
         </Grid>
 
-        <Grid variant="x" gap="xs">
-          <TextInput
-            :model-value="search"
-            :placeholder="`Search in ${schema.title.toLowerCase()}...`"
-            icon="mdi-magnify"
-            clearable
-            @update:model-value="emit('update:search', $event)"
-            @clear="emit('update:search', '')"
-          />
-          <Button
-            icon="mdi-refresh"
-            variant="tonal"
-            color="primary"
-            size="sm"
-            :loading="loading"
-            @click="emit('refresh')"
-          />
-        </Grid>
+<!--        <Grid variant="x" gap="xs">-->
+<!--          <TextInput-->
+<!--            :model-value="search"-->
+<!--            :placeholder="`Search in ${schema.title.toLowerCase()}...`"-->
+<!--            icon="mdi-magnify"-->
+<!--            clearable-->
+<!--            @update:model-value="emit('update:search', $event)"-->
+<!--            @clear="emit('update:search', '')"-->
+<!--          />-->
+<!--          <Button-->
+<!--            icon="mdi-refresh"-->
+<!--            variant="tonal"-->
+<!--            color="primary"-->
+<!--            size="sm"-->
+<!--            :loading="loading"-->
+<!--            @click="emit('refresh')"-->
+<!--          />-->
+<!--        </Grid>-->
       </Grid>
 
       <!-- Dynamic Filter Bar (рендерится только если переданы filterOptions) -->
@@ -327,23 +326,23 @@ const filterLabel = computed(() => {
           <td @click.stop>
             <Grid variant="x_end" gap="xss">
               <slot name="actions" :item="item">
-                <Button
-                  v-if="allowMr"
-                  variant="tonal"
-                  size="xs"
-                  color="secondary"
-                  @click="emit('propose-mr', item)"
-                >
-                  MR
-                </Button>
-                <Button
-                  variant="text"
-                  size="xs"
-                  color="primary"
-                  @click="emit('inspect', item)"
-                >
-                  Inspect
-                </Button>
+<!--                <Button-->
+<!--                  v-if="allowMr"-->
+<!--                  variant="tonal"-->
+<!--                  size="xs"-->
+<!--                  color="secondary"-->
+<!--                  @click="emit('propose-mr', item)"-->
+<!--                >-->
+<!--                  MR-->
+<!--                </Button>-->
+<!--                <Button-->
+<!--                  variant="text"-->
+<!--                  size="xs"-->
+<!--                  color="primary"-->
+<!--                  @click="emit('inspect', item)"-->
+<!--                >-->
+<!--                  Inspect-->
+<!--                </Button>-->
                 <AppCopyBtn
                   :text="getRowKey(item)"
                   :label="primaryKey.toUpperCase()"
@@ -356,7 +355,7 @@ const filterLabel = computed(() => {
       </v-table>
 
       <!-- Pagination Footer -->
-      <Grid variant="x_between" padding="sm" surface="elevated" border="t">
+      <Grid variant="x_between" padding="sm" border="t">
         <Body variant="xsMono" color="muted">
         Showing {{ total === 0 ? 0 : (page - 1) * pageSize + 1 }}–{{ Math.min(page * pageSize, total) }} of {{ total }}
         </Body>
@@ -379,6 +378,5 @@ const filterLabel = computed(() => {
           </Button>
         </Grid>
       </Grid>
-    </Card>
   </Grid>
 </template>

@@ -1,6 +1,7 @@
 import {defineNuxtConfig} from 'nuxt/config'
 import {defaultNuxtConfig} from '@razomy/nuxt/runtime/functions';
 import {c} from './configs/static-config';
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 const config = defaultNuxtConfig(c) as any;
 
@@ -11,13 +12,12 @@ config.vite = {
     exclude: ['quickjs-emscripten', 'esbuild'] // Исключаем из предсборки
   }
 }
-
 config.typescript = {
   // Completely disables type checking process in Nuxt
   typeCheck: false,
 
-    // Optional: If you still want types but want to loosen strictness
-    strict: false
+  // Optional: If you still want types but want to loosen strictness
+  strict: false
 }
 // config.modules.push('@pinia/nuxt')
 // config.plugins = [('~/plugins/vue_lib')]
@@ -25,5 +25,8 @@ config.typescript = {
 //   transpile: ['@razomy/language-vue']
 // }
 
+config.build = {
+  transpile: ['vuetify', '@razomy/vue'],
+}
 
 export default defineNuxtConfig(config)

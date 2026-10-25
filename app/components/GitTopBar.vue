@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import type { DataAuthor, DataViewMode } from '~/razomy/abstractions/graph';
-import Grid from '~/razomy/ui-vue/layout/Grid.vue';
-import Body from '~/razomy/ui-vue/typography/Body.vue';
-import Button from '~/razomy/ui-vue/button/Button.vue';
-import Badge from '~/razomy/ui-vue/elements/Badge.vue';
+import {Grid} from '@razomy/vue';
+import {Body} from '@razomy/vue';
+import {Button} from '@razomy/vue';
+import {Badge} from '@razomy/vue';
 
 defineProps<{
   authors: DataAuthor[];

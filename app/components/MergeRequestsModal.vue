@@ -7,12 +7,12 @@ import type {
   MergeRequest,
   MergeRequestFieldChange,
 } from '~/razomy/abstractions/graph';
-import Grid from '~/razomy/ui-vue/layout/Grid.vue';
-import Card from '~/razomy/ui-vue/card/Card.vue';
-import Body from '~/razomy/ui-vue/typography/Body.vue';
-import Button from '~/razomy/ui-vue/button/Button.vue';
-import Badge from '~/razomy/ui-vue/elements/Badge.vue';
-import TextInput from '~/razomy/ui-vue/input/TextInput.vue';
+import {Grid} from '@razomy/vue';
+import {Card} from '@razomy/vue';
+import {Body} from '@razomy/vue';
+import {Button} from '@razomy/vue';
+import {Badge} from '@razomy/vue';
+import {TextInput} from '@razomy/vue';
 
 const props = defineProps<{
   drawerOpen: boolean;

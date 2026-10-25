@@ -1,6 +1,6 @@
 import {Pool} from 'pg';
-import {createDbContext} from "#server/functions/entities.ts";
-import {lowerCase, snakeCase} from "@razomy/string-case";
+import {createDbContext} from "@razomy/cloud-db-pg/data";
+import {snakeCase} from "@razomy/string-case";
 
 // 1. Создаем стандартный пул pg
 const pool = new Pool({
@@ -61,7 +61,7 @@ export default defineEventHandler(async (event) => {
 
   const db = createDbContext(pool);
   const query = getQuery(event);
-  const name =snakeCase(query.name as string);
+  const name = snakeCase(query.name as string);
   const found = await db[name].findMany();
-  return {nodes:found.map(i=>i.$toJSON())};
+  return {nodes: found.map((i) => i.$toJson())};
 });

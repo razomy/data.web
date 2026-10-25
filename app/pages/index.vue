@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import Examplorer from "~/components/Examplorer.vue";
-import {useIdeLayout} from "~/composables/useIdeLayout.ts";
-import type {VfsItem} from "~/razomy/ui-vue/vfs/types.ts";
+import {useIdeLayout} from "~/razomy/tab/useIdeLayout.ts";
 import Tabller from "~/components/Tabller.vue";
 
 const {definePageTabs, openWithContext} = useIdeLayout()

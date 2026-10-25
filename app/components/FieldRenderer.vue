@@ -2,11 +2,11 @@
 import { computed, ref } from 'vue';
 import type { EntityField } from '~/razomy/abstractions/graph';
 import FieldValue from './FieldValue.vue';
-import Grid from '~/razomy/ui-vue/layout/Grid.vue';
-import Body from '~/razomy/ui-vue/typography/Body.vue';
-import Badge from '~/razomy/ui-vue/elements/Badge.vue';
-import TextInput from '~/razomy/ui-vue/input/TextInput.vue';
-import Button from '~/razomy/ui-vue/button/Button.vue';
+import {Grid} from '@razomy/vue';
+import {Body} from '@razomy/vue';
+import {Badge} from '@razomy/vue';
+import {TextInput} from '@razomy/vue';
+import {Button} from '@razomy/vue';
 
 const props = withDefaults(
   defineProps<{

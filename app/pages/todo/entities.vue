@@ -2,17 +2,17 @@
 import { onMounted, watch } from 'vue';
 import { useWorkspaceStore } from '~/composables/useWorkspaceStore';
 import type { Entity, TableRow } from '~/razomy/abstractions/graph';
-import Grid from '~/razomy/ui-vue/layout/Grid.vue';
-import Body from '~/razomy/ui-vue/typography/Body.vue';
-import Button from '~/razomy/ui-vue/button/Button.vue';
-import Badge from '~/razomy/ui-vue/elements/Badge.vue';
+import {Grid} from '@razomy/vue';
+import {Body} from '@razomy/vue';
+import {Button} from '@razomy/vue';
+import {Badge} from '@razomy/vue';
 import GitTopBar from '~/components/GitTopBar.vue';
 import LeftDatasetSidebar from '~/components/LeftDatasetSidebar.vue';
 import VirtualTable from '~/components/VirtualTable.vue';
 import EntityCardsGrid from '~/components/EntityCardsGrid.vue';
 import EntitySidebar from '~/components/EntitySidebar.vue';
 import MergeRequestsModal from '~/components/MergeRequestsModal.vue';
-import AppSearchInput from '~/razomy/ui-vue/AppSearchInput.vue';
+import {AppSearchInput} from '@razomy/vue';
 
 const ws = useWorkspaceStore();
 

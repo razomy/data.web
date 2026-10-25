@@ -2,10 +2,10 @@
 import { ref, computed, watch, onMounted, onUnmounted } from 'vue';
 import type { Entity, GraphNode, GraphEdge, LocalSubgraph } from '~/razomy/abstractions/graph';
 import { resolveLocalSubgraph } from '~/data/graphResolver';
-import Grid from '~/razomy/ui-vue/layout/Grid.vue';
-import Body from '~/razomy/ui-vue/typography/Body.vue';
-import Button from '~/razomy/ui-vue/button/Button.vue';
-import Badge from '~/razomy/ui-vue/elements/Badge.vue';
+import {Grid} from '@razomy/vue';
+import {Body} from '@razomy/vue';
+import {Button} from '@razomy/vue';
+import {Badge} from '@razomy/vue';
 
 const props = withDefaults(
   defineProps<{

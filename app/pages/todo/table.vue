@@ -4,7 +4,7 @@
 <!--import type { FsNodeRecord } from '~/razomy/abstractions/graph';-->
 <!--import { useGraphApi } from '~/composables/useGraphApi';-->
 <!--import { useWorkspaceStore } from '~/composables/useWorkspaceStore';-->
-<!--import Grid from '~/razomy/ui-vue/layout/Grid.vue';-->
+<!--import {Grid} from '@razomy/vue';-->
 <!--import GitTopBar from '~/components/GitTopBar.vue';-->
 <!--import TableExplorer from '~/components/tableExplorer.vue';-->
 <!--import EntitySidebar from '~/components/EntitySidebar.vue';-->

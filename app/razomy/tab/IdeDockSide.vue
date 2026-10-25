@@ -1,6 +1,4 @@
-<!-- components/ide/IdeDockSide.vue -->
 <template>
-  <!-- 1. УЗКАЯ ПОЛОСА ИКОНОК (JetBrains Tool Window Bar - 36px) -->
   <v-navigation-drawer
     v-if="!isMobile && dock.tabs.length > 0"
     permanent
@@ -8,14 +6,15 @@
     :rail-width="RAIL_WIDTH"
     :location="side"
     elevation="0"
-    :class="[borderClass, 'bg-surface-light']"
+    :class="class_"
+    :border="borderClass"
   >
-    <v-list density="compact" nav class="pa-1 d-flex flex-column align-center">
+    <Grid density="compact" nav variant="y" padding="xss" class="mt-2">
       <v-tooltip
         v-for="tab in dock.tabs"
         :key="tab.id"
+        height="32"
         :location="isLeft ? 'end' : 'start'"
-        open-delay="300"
       >
         <template #activator="{ props }">
           <v-badge
@@ -42,7 +41,7 @@
         <span>{{ tab.title }}</span>
         <span v-if="tab.shortcut" class="text-disabled ml-1">({{ tab.shortcut }})</span>
       </v-tooltip>
-    </v-list>
+    </Grid>
   </v-navigation-drawer>
 
   <!-- 2. ВЫДВИЖНАЯ ПАНЕЛЬ КОНТЕНТА (Tool Window) -->
@@ -52,12 +51,12 @@
     :temporary="isMobile"
     :location="side"
     elevation="0"
-    :class="borderClass"
+    :border="borderClass"
     @update:model-value="val => !val && (dock.activeTabId = null)"
   >
     <!-- Шапка инструментального окна -->
     <template v-if="activeTab" #prepend>
-      <v-toolbar density="compact" height="32" color="surface" class="border-b px-2">
+      <v-toolbar density="compact" color="surface" class="border-b px-2">
         <!-- Переключатель табов на мобилке -->
         <v-slide-group v-if="isMobile && dock.tabs.length > 1" v-model="dock.activeTabId">
           <v-slide-group-item
@@ -80,8 +79,7 @@
 
         <!-- Заголовок на десктопе -->
         <template v-else>
-          <v-icon :icon="activeTab.icon" size="14" class="mr-1.5 text-medium-emphasis" />
-          <span class="text-caption font-weight-bold text- truncate">
+          <span class="text-caption font-weight-bold text-truncate">
             {{ activeTab.title }}
           </span>
         </template>
@@ -129,11 +127,12 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed, onBeforeUnmount } from 'vue'
+import { ref, computed, onBeforeUnmount, type ClassValue } from 'vue'
 import { useDisplay } from 'vuetify'
-import { useIdeLayout, type DockSide } from '~/composables/useIdeLayout'
+import { useIdeLayout, type DockSide } from '~/razomy/tab/useIdeLayout.ts'
+import {Grid} from '@razomy/vue';
 
-const props = defineProps<{ side: DockSide }>()
+const props = defineProps<{ side: DockSide, class_?: ClassValue }>()
 const emit = defineEmits<{ (e: 'resize-state', val: boolean): void }>()
 
 const RAIL_WIDTH = 36 // Компактный размер как в современном JetBrains UI
@@ -142,7 +141,7 @@ const { mobile: isMobile, width: displayWidth } = useDisplay()
 
 const dock = computed(() => docks[props.side].value)
 const isLeft = computed(() => props.side === 'left')
-const borderClass = computed(() => (isLeft.value ? 'border-e' : 'border-s'))
+const borderClass = computed(() => (isLeft.value ? 'e' : 's'))
 const activeTab = computed(() => dock.value.tabs.find(t => t.id === dock.value.activeTabId) || null)
 
 // Логика ресайза, инкапсулированная внутри панели

@@ -7,8 +7,8 @@
 
 <script setup lang="ts">
 import { computed } from 'vue';
-import type { IVfsController, VfsItem, VfsQuery } from '../razomy/ui-vue/vfs/types.ts';
-import VfsAside from "~/razomy/ui-vue/vfs/VfsAside.vue";
+import type { IVfsController, VfsItem, VfsQuery } from '@razomy/vue';
+import {VfsAside} from "@razomy/vue";
 
 // Внешняя или основная модель (строка)
 const selectedItem = defineModel<string>('selectedItem', { default: 'Color' });

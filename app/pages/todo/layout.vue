@@ -1,13 +1,13 @@
 <!-- pages/index.vue -->
 <script setup lang="ts">
 import { ref, h } from 'vue'
-import { useIdeLayout } from '~/composables/useIdeLayout'
+import { useIdeLayout } from '~/razomy/tab/useIdeLayout.ts'
 import UserInspector from '~/components/UserInspector.vue'
-import Container from '~/razomy/ui-vue/layout/Container.vue'
-import Grid from '~/razomy/ui-vue/layout/Grid.vue'
-import Card from '~/razomy/ui-vue/card/Card.vue'
-import Body from '~/razomy/ui-vue/typography/Body.vue'
-import Button from '~/razomy/ui-vue/button/Button.vue'
+import {Container} from '@razomy/vue'
+import {Grid} from '@razomy/vue'
+import {Card} from '@razomy/vue'
+import {Body} from '@razomy/vue'
+import {Button} from '@razomy/vue'
 
 const { definePageTabs, openWithContext } = useIdeLayout()
 

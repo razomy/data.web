@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import Grid from '~/razomy/ui-vue/layout/Grid.vue';
-import Card from '~/razomy/ui-vue/card/Card.vue';
-import Body from '~/razomy/ui-vue/typography/Body.vue';
-import Alert from '~/razomy/ui-vue/alert/Alert.vue';
-import Divider from '~/razomy/ui-vue/divider/Divider.vue';
-import TextInput from '~/razomy/ui-vue/input/TextInput.vue';
+import {Grid} from '@razomy/vue';
+import {Card} from '@razomy/vue';
+import {Body} from '@razomy/vue';
+import {Alert} from '@razomy/vue';
+import {Divider} from '@razomy/vue';
+import {TextInput} from '@razomy/vue';
 
 defineProps<{
   user?: { id: number; name: string; role: string } | null;

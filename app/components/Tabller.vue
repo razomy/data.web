@@ -1,14 +1,15 @@
 <script setup lang="ts">
 import {computed, ref} from 'vue';
-import Grid from '~/razomy/ui-vue/layout/Grid.vue';
+import {Grid} from '@razomy/vue';
 import TableExplorer from '~/components/tableExplorer.vue';
-import {Tables} from "~/composables/tables.ts";
+import {TABLES} from "@razomy/cloud-db-pg";
+import {constantCase} from "@razomy/string-case";
 
 const selectedItem = defineModel<string>('selectedItem');
 
 
 // Выбираем текущую активную таблицу (например, через селект в UI)
-const currentSchema = computed(() => Tables[selectedItem.value + 'Declaration']);
+const currentSchema = computed(() => TABLES[constantCase(selectedItem.value + 'Declaration')]);
 
 const search = ref('');
 const page = ref(1);
@@ -21,7 +22,6 @@ watch(selectedItem, async (newId) => {
     const res =  (await $fetch<{ nodes: any[] }>('/api/table', {
       query: {name:selectedItem.value},
     })).nodes;
-    console.log(res);
     records.value = res as any;
   } catch (error) {
     console.error("Failed to fetch user data:", error)
@@ -32,18 +32,12 @@ watch(selectedItem, async (newId) => {
 
 
 <template>
-  <Grid variant="y_header_main" full-height clip surface="background">
+<!--  <Grid variant="y_header_main" full-height clip surface="background">-->
     <!--      :variant="ws.rightToolOpen.value && (ws.inspectedFile.value || ws.inspectedEntity.value) ? 'x_1fr_auto' : 'full'"-->
-    <Grid
-      full-height
-      clip
-    >
-
-      <select v-model="selectedItem">
-        <option v-for="(decl, key) in Tables" :key="key" :value="key">
-          {{ decl.title }} ({{ decl.name_ }})
-        </option>
-      </select>
+<!--    <Grid-->
+<!--      full-height-->
+<!--      clip-->
+<!--    >-->
 
       <TableExplorer
         :schema="currentSchema!"
@@ -74,7 +68,7 @@ watch(selectedItem, async (newId) => {
       <!--        @propose-mr-file="ws.openProposeMrForFile"-->
       <!--        @save-file="async p => { await ws.saveFsItemContent(p.id, p.content_json); await loadPage(); }"-->
       <!--      />-->
-    </Grid>
+<!--    </Grid>-->
 
     <!--    <MergeRequestsModal-->
     <!--      :drawer-open="ws.mrDrawerOpen.value"-->
@@ -91,5 +85,5 @@ watch(selectedItem, async (newId) => {
     <!--      @create-mr="ws.submitMergeRequest"-->
     <!--      @inspect-target="id => ws.inspectEntityById(id)"-->
     <!--    />-->
-  </Grid>
+<!--  </Grid>-->
 </template>
