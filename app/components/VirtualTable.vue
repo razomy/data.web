@@ -2,9 +2,9 @@
 import { ref, computed, onMounted, onUnmounted } from 'vue';
 import TableCellValue from './TableCellValue.vue';
 import type { TableRow } from '~/razomy/abstractions/graph';
-import Grid from '~/razomy/ds-vue/layout/Grid.vue';
-import Body from '~/razomy/ds-vue/typography/Body.vue';
-import Badge from '~/razomy/ds-vue/elements/Badge.vue';
+import Grid from '~/razomy/ui-vue/layout/Grid.vue';
+import Body from '~/razomy/ui-vue/typography/Body.vue';
+import Badge from '~/razomy/ui-vue/elements/Badge.vue';
 
 export interface ColDef {
   key: string;

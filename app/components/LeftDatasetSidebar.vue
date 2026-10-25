@@ -2,11 +2,11 @@
 import { computed, ref } from 'vue';
 import type { DataAuthor, DatasetCollection, FsNodeRecord } from '~/razomy/abstractions/graph';
 import { FsNodeType } from '~/razomy/abstractions/graph';
-import Grid from '~/razomy/ds-vue/layout/Grid.vue';
-import Body from '~/razomy/ds-vue/typography/Body.vue';
-import Badge from '~/razomy/ds-vue/elements/Badge.vue';
-import TextInput from '~/razomy/ds-vue/input/TextInput.vue';
-import Button from '~/razomy/ds-vue/button/Button.vue';
+import Grid from '~/razomy/ui-vue/layout/Grid.vue';
+import Body from '~/razomy/ui-vue/typography/Body.vue';
+import Badge from '~/razomy/ui-vue/elements/Badge.vue';
+import TextInput from '~/razomy/ui-vue/input/TextInput.vue';
+import Button from '~/razomy/ui-vue/button/Button.vue';
 
 const props = defineProps<{
   datasets: DatasetCollection[];

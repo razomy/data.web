@@ -10,16 +10,13 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@prisma/adapter-pg": "^7.4.2",
     "@prisma/client": "^7.4.2",
     "@razomy/nuxt": "../../code/js.chunk/src/nuxt/dist/",
     "@razomy/string-case": "0.0.1-beta.2",
-    "firebase-admin": "^13.7.0",
-    "tailwindcss": "^4.3.3"
+    "firebase-admin": "^13.7.0"
   },
   "devDependencies": {
     "@types/node": "^25.3.3",
-    "prisma": "^7.4.2",
     "typescript": "^5.9.3",
     "vite": "^8.3.0",
     "vue-tsc": "^3.2.4"

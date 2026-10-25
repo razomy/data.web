@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Grid, { type GridGap, type GridPadding } from '~/razomy/ds-vue/layout/Grid.vue';
+import Grid, { type GridGap, type GridPadding } from '~/razomy/ui-vue/layout/Grid.vue';
 
 withDefaults(
   defineProps<{

@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { ref, computed, watch, onMounted, onUnmounted } from 'vue';
 import type { GraphNode, GraphEdge, Entity } from '~/razomy/abstractions/graph';
-import Grid from '~/razomy/ds-vue/layout/Grid.vue';
-import Body from '~/razomy/ds-vue/typography/Body.vue';
-import Button from '~/razomy/ds-vue/button/Button.vue';
-import Badge from '~/razomy/ds-vue/elements/Badge.vue';
+import Grid from '~/razomy/ui-vue/layout/Grid.vue';
+import Body from '~/razomy/ui-vue/typography/Body.vue';
+import Button from '~/razomy/ui-vue/button/Button.vue';
+import Badge from '~/razomy/ui-vue/elements/Badge.vue';
 
 const props = defineProps<{
   nodes: GraphNode[];

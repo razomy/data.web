@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 import type { EntityField } from '~/razomy/abstractions/graph';
-import Grid from '~/razomy/ds-vue/layout/Grid.vue';
-import Body from '~/razomy/ds-vue/typography/Body.vue';
-import Badge from '~/razomy/ds-vue/elements/Badge.vue';
+import Grid from '~/razomy/ui-vue/layout/Grid.vue';
+import Body from '~/razomy/ui-vue/typography/Body.vue';
+import Badge from '~/razomy/ui-vue/elements/Badge.vue';
 
 const props = defineProps<{
   field: EntityField;

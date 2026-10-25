@@ -2,12 +2,12 @@
 import { ref, computed } from 'vue';
 import type { Entity } from '~/razomy/abstractions/graph';
 import FieldRenderer from './FieldRenderer.vue';
-import Grid from '~/razomy/ds-vue/layout/Grid.vue';
-import Body from '~/razomy/ds-vue/typography/Body.vue';
-import Badge from '~/razomy/ds-vue/elements/Badge.vue';
-import Button from '~/razomy/ds-vue/button/Button.vue';
-import AppCopyBtn from './ui/AppCopyBtn.vue';
-import StatCard from './ui/StatCard.vue';
+import Grid from '~/razomy/ui-vue/layout/Grid.vue';
+import Body from '~/razomy/ui-vue/typography/Body.vue';
+import Badge from '~/razomy/ui-vue/elements/Badge.vue';
+import Button from '~/razomy/ui-vue/button/Button.vue';
+import AppCopyBtn from '../razomy/ui-vue/AppCopyBtn.vue';
+import StatCard from '../razomy/ui-vue/StatCard.vue';
 import { entities } from '~/data/mockData';
 
 const props = defineProps<{

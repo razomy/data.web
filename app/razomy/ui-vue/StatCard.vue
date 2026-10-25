@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import Grid from '~/razomy/ds-vue/layout/Grid.vue';
-import Body from '~/razomy/ds-vue/typography/Body.vue';
-import type { TextColor } from '~/razomy/ds-vue/typography/Text.vue';
+import Grid from '~/razomy/ui-vue/layout/Grid.vue';
+import Body from '~/razomy/ui-vue/typography/Body.vue';
+import type { TextColor } from '~/razomy/ui-vue/typography/Text.vue';
 
 withDefaults(
   defineProps<{

@@ -2,8 +2,8 @@
 import { computed } from 'vue';
 import type { TableRow } from '~/razomy/abstractions/graph';
 import EntityCard from './EntityCard.vue';
-import Grid from '~/razomy/ds-vue/layout/Grid.vue';
-import Alert from '~/razomy/ds-vue/alert/Alert.vue';
+import Grid from '~/razomy/ui-vue/layout/Grid.vue';
+import Alert from '~/razomy/ui-vue/alert/Alert.vue';
 
 const props = defineProps<{
   rows: TableRow[];

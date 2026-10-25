@@ -11,6 +11,14 @@ config.vite = {
     exclude: ['quickjs-emscripten', 'esbuild'] // Исключаем из предсборки
   }
 }
+
+config.typescript = {
+  // Completely disables type checking process in Nuxt
+  typeCheck: false,
+
+    // Optional: If you still want types but want to loosen strictness
+    strict: false
+}
 // config.modules.push('@pinia/nuxt')
 // config.plugins = [('~/plugins/vue_lib')]
 // config.build = {

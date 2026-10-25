@@ -1,4 +1,4 @@
-import { mockOrm } from './mockOrm';
+import { mockOrm } from '../db/mockOrm.ts';
 import { FsNodeType } from '~/razomy/abstractions/graph';
 import type { FsNodeRecord, PaginatedResult } from '~/razomy/abstractions/graph';
 

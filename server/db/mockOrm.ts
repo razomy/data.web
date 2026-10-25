@@ -1,4 +1,4 @@
-import { FsNodeType } from '~/razomy/abstractions/graph';
+import { FsNodeType } from '~/razomy/abstractions/graph.ts';
 import type {
   DataAuthor,
   DatasetCollection,
@@ -11,10 +11,10 @@ import type {
   MergeRequestFieldChange,
   PaginatedResult,
   TableRow,
-} from '~/razomy/abstractions/graph';
-import { AUTHORS, entities as seedEntities, graphEdges as seedEdges, graphNodes as seedGraphNodes } from '~/data/mockData';
-import { generateRows } from '~/data/generateRows';
-import { registerEntity, resolveLocalSubgraph, rowToEntity } from '~/data/graphResolver';
+} from '~/razomy/abstractions/graph.ts';
+import { AUTHORS, entities as seedEntities, graphEdges as seedEdges, graphNodes as seedGraphNodes } from '~/data/mockData.ts';
+import { generateRows } from '~/data/generateRows.ts';
+import { registerEntity, resolveLocalSubgraph, rowToEntity } from '~/data/graphResolver.ts';
 
 export interface FindManyQuery {
   where?: {

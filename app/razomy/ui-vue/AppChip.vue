@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Badge, { type BadgeRole, type BadgeVariant } from '~/razomy/ds-vue/elements/Badge.vue';
+import Badge, { type BadgeRole, type BadgeVariant } from '~/razomy/ui-vue/elements/Badge.vue';
 
 withDefaults(
   defineProps<{

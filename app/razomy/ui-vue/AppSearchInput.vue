@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import TextInput from '~/razomy/ds-vue/input/TextInput.vue';
+import TextInput from '~/razomy/ui-vue/input/TextInput.vue';
 
 defineProps<{
   modelValue: string;

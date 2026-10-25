@@ -1,4 +1,4 @@
-import { mockOrm } from '../../functions/mockOrm';
+import { mockOrm } from '../../db/mockOrm.ts';
 import { cookieVerifyOrThrow } from '../../functions/cookieVerifyOrThrow';
 
 export default defineEventHandler(async (event) => {

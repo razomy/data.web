@@ -2,12 +2,12 @@
 import { computed } from 'vue';
 import type { TableRow } from '~/razomy/abstractions/graph';
 import { entities } from '~/data/mockData';
-import Grid from '~/razomy/ds-vue/layout/Grid.vue';
-import Card from '~/razomy/ds-vue/card/Card.vue';
-import Body from '~/razomy/ds-vue/typography/Body.vue';
-import Badge from '~/razomy/ds-vue/elements/Badge.vue';
-import Button from '~/razomy/ds-vue/button/Button.vue';
-import AppCopyBtn from './ui/AppCopyBtn.vue';
+import Grid from '~/razomy/ui-vue/layout/Grid.vue';
+import Card from '~/razomy/ui-vue/card/Card.vue';
+import Body from '~/razomy/ui-vue/typography/Body.vue';
+import Badge from '~/razomy/ui-vue/elements/Badge.vue';
+import Button from '~/razomy/ui-vue/button/Button.vue';
+import AppCopyBtn from '../razomy/ui-vue/AppCopyBtn.vue';
 
 const props = defineProps<{
   rows: TableRow[];

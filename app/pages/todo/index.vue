@@ -2,11 +2,11 @@
 import { computed, onMounted, watch } from 'vue';
 import { useWorkspaceStore } from '~/composables/useWorkspaceStore';
 import type { Entity, TableRow } from '~/razomy/abstractions/graph';
-import Grid from '~/razomy/ds-vue/layout/Grid.vue';
-import Container from '~/razomy/ds-vue/layout/Container.vue';
-import Body from '~/razomy/ds-vue/typography/Body.vue';
-import Button from '~/razomy/ds-vue/button/Button.vue';
-import Badge from '~/razomy/ds-vue/elements/Badge.vue';
+import Grid from '~/razomy/ui-vue/layout/Grid.vue';
+import Container from '~/razomy/ui-vue/layout/Container.vue';
+import Body from '~/razomy/ui-vue/typography/Body.vue';
+import Button from '~/razomy/ui-vue/button/Button.vue';
+import Badge from '~/razomy/ui-vue/elements/Badge.vue';
 import GitTopBar from '~/components/GitTopBar.vue';
 import LeftDatasetSidebar from '~/components/LeftDatasetSidebar.vue';
 import VirtualTable from '~/components/VirtualTable.vue';
@@ -17,7 +17,7 @@ import TextCorpusView from '~/components/TextCorpusView.vue';
 import SearchResultCard from '~/components/SearchResultCard.vue';
 import EntitySidebar from '~/components/EntitySidebar.vue';
 import MergeRequestsModal from '~/components/MergeRequestsModal.vue';
-import AppSearchInput from '~/components/ui/AppSearchInput.vue';
+import AppSearchInput from '~/razomy/ui-vue/AppSearchInput.vue';
 
 const ws = useWorkspaceStore();
 
